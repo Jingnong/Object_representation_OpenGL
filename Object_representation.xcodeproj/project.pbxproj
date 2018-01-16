@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80189C831FABFA030079720B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80189C821FABF9FB0079720B /* GLUT.framework */; };
 		80AC03901FABED7F00ED342F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80AC038F1FABED7F00ED342F /* main.cpp */; };
+		80AC03991FABEE2600ED342F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AC03971FABEDC300ED342F /* Cocoa.framework */; };
+		80AC039A1FABEE2D00ED342F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AC03981FABEDD800ED342F /* OpenGL.framework */; };
+		80AC039C1FABEE6600ED342F /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AC039B1FABEE6600ED342F /* libglfw.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		80189C821FABF9FB0079720B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		80AC038C1FABED7F00ED342F /* Assignment2_Nov_2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment2_Nov_2; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC038F1FABED7F00ED342F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		80AC03971FABEDC300ED342F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		80AC03981FABEDD800ED342F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		80AC039B1FABEE6600ED342F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../../../../../usr/local/lib/libglfw.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80189C831FABFA030079720B /* GLUT.framework in Frameworks */,
+				80AC039C1FABEE6600ED342F /* libglfw.3.dylib in Frameworks */,
+				80AC039A1FABEE2D00ED342F /* OpenGL.framework in Frameworks */,
+				80AC03991FABEE2600ED342F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,7 @@
 			children = (
 				80AC038E1FABED7F00ED342F /* Assignment2_Nov_2 */,
 				80AC038D1FABED7F00ED342F /* Products */,
+				80AC03961FABEDC300ED342F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +73,17 @@
 				80AC038F1FABED7F00ED342F /* main.cpp */,
 			);
 			path = Assignment2_Nov_2;
+			sourceTree = "<group>";
+		};
+		80AC03961FABEDC300ED342F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80189C821FABF9FB0079720B /* GLUT.framework */,
+				80AC039B1FABEE6600ED342F /* libglfw.3.dylib */,
+				80AC03981FABEDD800ED342F /* OpenGL.framework */,
+				80AC03971FABEDC300ED342F /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +257,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +267,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
